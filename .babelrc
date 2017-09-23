@@ -1,0 +1,40 @@
+{
+  "presets": [
+    "es2015",
+    "stage-1"
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "env"
+      ],
+      "plugins": [
+        ["transform-react-jsx"],
+        ["module-resolver", {
+        "root": ["."]
+        }]
+      ]
+    },
+    "production": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": [">=5%"],
+            "uglify": true
+          }
+        }]
+      ],
+      "plugins": [
+        ["transform-react-jsx"],
+        ["module-resolver", {
+        "root": ["."]
+        }]
+      ]
+    },
+    "test": {
+      "presets": [
+        "env"
+      ]
+    }
+  }
+}
